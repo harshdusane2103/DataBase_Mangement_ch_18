@@ -22,7 +22,7 @@
     SELECT Name, salary FROM Employee;
   
   <h3>Example :</h3>
-  <img src =" https://github.com/user-attachments/assets/8140e92b-77c6-4f8b-99eb-0ef47483a4c7">
+  <img src="https://github.com/user-attachments/assets/8140e92b-77c6-4f8b-99eb-0ef47483a4c7">
    <h3>Search for employees with names containing "H" </h3>
 
          SELECT * FROM employee WHERE name like 'H%';
