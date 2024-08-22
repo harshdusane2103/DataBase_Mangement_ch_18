@@ -28,14 +28,14 @@
          SELECT * FROM employee WHERE name like 'H%';
  
   <h3>Example :</h3>
-  <img src =" https://github.com/user-attachments/assets/dc957501-3944-4d7d-9e4f-b94ae6964846 ">
+  <img src =" https://github.com/user-attachments/assets/36e9d984-9285-4844-ab39-83dfa79a72e6 ">
   
 
   
   
     
-  
-    
+
+
   </p>
 </div>
 
