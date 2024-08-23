@@ -38,4 +38,13 @@
 
   </p>
 </div>
+<div align="center">
+  <h1 align=" center">🔥Budget Tracker🔥</h1>
+
+
+
+
+  <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/BUD.png",height=35%,width=21%>
+  <video src="https://github.com/user-attachments/assets/550911d5-a3ef-44c7-835d-6f166c513fd5">
+</div>
 
