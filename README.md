@@ -19,28 +19,19 @@
   <img src="https://github.com/user-attachments/assets/9bc24ff8-f83b-4075-a447-f7ea01510813">
     <h3>Retrive specific column of Employee data : </h3>
     
-    SELECT Name, salary FROM Employee;
+      SELECT Name, salary FROM Employee;
   
   <h3>Example :</h3>
   <img src="https://github.com/user-attachments/assets/8140e92b-77c6-4f8b-99eb-0ef47483a4c7">
    <h3>Search for employees with names containing "H" </h3>
 
          SELECT * FROM employee WHERE name like 'H%';
- 
-  <h3>Example :</h3>
+ <h3>Example :</h3>
   <img src =" https://github.com/user-attachments/assets/36e9d984-9285-4844-ab39-83dfa79a72e6 ">
-  
-
-  
-  
-    
-
-
   </p>
 </div>
  <h1 align=" center">🔥Budget Tracker🔥</h1>
 <div align="center">
- 
   <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/BUD.png",width=21%,height=35%>
   <video src="https://github.com/user-attachments/assets/550911d5-a3ef-44c7-835d-6f166c513fd5">
 </div>
