@@ -3,9 +3,7 @@ import 'package:sqflite/sqflite.dart';
 
 class DbHelper {
   static DbHelper dbHelper = DbHelper._();
-
   DbHelper._();
-
   Database? _db;
 
   Future get database async => _db ?? await initDatabase();
@@ -43,6 +41,14 @@ class DbHelper {
     Database? db = await database;
     String sql = '''SELECT * FROM finance''';
     return await db!.rawQuery(sql);
+  }
+  Future<List<Map<String, Object?>>> readcategorywiseData(int isIncome)
+  async {
+    Database? db=await database;
+    String sql ='''SELECT * FROM finance where isIncome=?''';
+    List args=[isIncome];
+    return await db!.rawQuery(sql,args);
+
   }
 
   Future deleteData(int id) async {

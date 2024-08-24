@@ -1,52 +1,74 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:sqfilt_app/DataBaseHelper/DataHelper.dart';
+import 'package:sqflite/sqflite.dart';
 
-class BudgetController extends GetxController {
+class BudgetController extends GetxController
+{
   RxList data = [].obs;
   RxBool isIncome = false.obs;
   RxDouble totalIncome = 0.0.obs;
   RxDouble totalExpense = 0.0.obs;
+  RxDouble totalbalance=0.0.obs;
 
   TextEditingController txtAmount = TextEditingController();
   TextEditingController txtCategory = TextEditingController();
 
   @override
-  void onInit() {
+  void onInit()
+  {
     super.onInit();
     initDb();
   }
 
-  void setIncome(bool value) {
+  void setIncome(bool value)
+  {
     isIncome.value = value;
   }
 
-  Future initDb() async {
+  Future initDb()
+  async {
     await DbHelper.dbHelper.database;
     await getRecords();
   }
 
-  Future insertRecord(double amount, int isIncome, String category) async {
-    await DbHelper.dbHelper.insertData(amount, isIncome, category);
+  Future insertRecord(double amount,int isIncome,String category)
+  async {
+    await DbHelper.dbHelper.insertData(amount,isIncome,category);
     await getRecords();
   }
 
-  Future getRecords() async {
+  Future getRecords()
+  async {
+
     totalExpense.value = 0.0;
     totalIncome.value = 0.0;
-    data.value = await DbHelper.dbHelper.readData();
-    for (var i in data) {
-      if (i['isIncome'] == 1) {
+    data.value =  await DbHelper.dbHelper.readData();
+    for(var i in data)
+    {
+      if(i['isIncome']==1)
+      {
         totalIncome.value = totalIncome.value + i['amount'];
-      } else {
+      }
+      else
+      {
         totalExpense.value = totalExpense.value + i['amount'];
       }
     }
 
     return data;
   }
+  Future<void> totalBalance(isIncome)
+  async {
+    data.value= await DbHelper.dbHelper.readCategorywiseData(isIncome);
 
-  Future removeRecord(int id) async {
+  }
+
+
+
+  Future removeRecord(int id)
+  async {
     await DbHelper.dbHelper.deleteData(id);
     await getRecords();
   }

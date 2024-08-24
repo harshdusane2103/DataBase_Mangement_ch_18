@@ -32,64 +32,111 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    height: 40,
-                    width: 180,
-                    decoration: BoxDecoration(
-                        color: Colors.white10,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.grey, width: 0.5)),
-                    child: Center(
-                      child: Row(
-                        children: [
-                          Text(
-                            'Total Income:',
-                            style: const TextStyle(
-                                color: Colors.greenAccent,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    InkWell(
+                      onTap:(){
+                        controller.totalBalance(1);
+
+
+                      },
+
+                      child: Container(
+                        height: 40,
+                        width: 180,
+                        decoration: BoxDecoration(
+                            color: Colors.white10,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Colors.grey, width: 0.5)),
+                        child: Center(
+                          child: Row(
+                            children: [
+                              Text(
+                                'Total Income:',
+                                style: const TextStyle(
+                                    color: Colors.greenAccent,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16),
+                              ),
+                              Text(
+                                controller.totalIncome != 0.0.obs
+                                    ? ' ${controller.totalIncome}'
+                                    : '',
+                                style: const TextStyle(
+                                    color: Colors.white, fontSize: 16),
+                              ),
+                            ],
                           ),
-                          Text(
-                            controller.totalIncome != 0.0.obs
-                                ? ' ${controller.totalIncome}'
-                                : '',
-                            style: const TextStyle(
-                                color: Colors.greenAccent, fontSize: 16),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    height: 40,
-                    width: 180,
-                    decoration: BoxDecoration(
-                        color: Colors.white10,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.grey, width: 0.5)),
-                    child: Center(
-                      child: Row(
-                        children: [
-                          Text(
-                            'Total Expense: ',
-                            style: const TextStyle(
-                                color: Colors.red, fontSize: 16),
+                    SizedBox(width: 5,),
+                    InkWell(
+                      onTap: (){
+                        controller.totalBalance(0);
+
+                      },
+                      child: Container(
+                        height: 40,
+                        width: 180,
+                        decoration: BoxDecoration(
+                            color: Colors.white10,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Colors.grey, width: 0.5)),
+                        child: Center(
+                          child: Row(
+                            children: [
+                              Text(
+                                'Total Excpnce: ',
+                                style: const TextStyle(
+                                    color: Colors.red, fontSize: 16),
+                              ),
+                              Text(
+                                controller.totalExpense != 0.0.obs
+                                    ? ' ${controller.totalExpense}'
+                                    : '',
+                                style: const TextStyle(
+                                    color: Colors.white, fontSize: 16),
+                              ),
+                            ],
                           ),
-                          Text(
-                            controller.totalExpense != 0.0.obs
-                                ? ' ${controller.totalExpense}'
-                                : '',
-                            style: const TextStyle(
-                                color: Colors.red, fontSize: 16),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                    SizedBox(width: 5,),
+                    InkWell(
+                      onTap: (){
+                        controller.getRecords();
+                      },
+                      child: Container(
+                        height: 40,
+                        width: 180,
+                        decoration: BoxDecoration(
+                            color: Colors.white10,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Colors.grey, width: 0.5)),
+                        child: Center(
+                          child: Row(
+                            children: [
+                              Text(
+                                'Total Balance: ',
+                                style: const TextStyle(
+                                    color: Colors.blue, fontSize: 16),
+                              ),
+                              Text('${controller.totalIncome.value + controller.totalExpense.value}',
+                                style: const TextStyle(
+                                    color: Colors.white, fontSize: 16),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 10,
