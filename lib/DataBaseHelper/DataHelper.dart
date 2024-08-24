@@ -3,7 +3,9 @@ import 'package:sqflite/sqflite.dart';
 
 class DbHelper {
   static DbHelper dbHelper = DbHelper._();
+
   DbHelper._();
+
   Database? _db;
 
   Future get database async => _db ?? await initDatabase();
