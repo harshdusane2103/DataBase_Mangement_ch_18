@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
 
                       child: Container(
                         height: 40,
-                        width: 180,
+                        width: 240,
                         decoration: BoxDecoration(
                             color: Colors.white10,
                             borderRadius: BorderRadius.circular(10),
@@ -81,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                       },
                       child: Container(
                         height: 40,
-                        width: 180,
+                        width: 240,
                         decoration: BoxDecoration(
                             color: Colors.white10,
                             borderRadius: BorderRadius.circular(10),
@@ -95,9 +95,7 @@ class HomeScreen extends StatelessWidget {
                                     color: Colors.red, fontSize: 16),
                               ),
                               Text(
-                                controller.totalExpense != 0.0.obs
-                                    ? ' ${controller.totalExpense}'
-                                    : '',
+                               '${controller.totalIncome.value+controller.totalExpense.value}',
                                 style: const TextStyle(
                                     color: Colors.white, fontSize: 16),
                               ),
@@ -113,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                       },
                       child: Container(
                         height: 40,
-                        width: 180,
+                        width: 240,
                         decoration: BoxDecoration(
                             color: Colors.white10,
                             borderRadius: BorderRadius.circular(10),

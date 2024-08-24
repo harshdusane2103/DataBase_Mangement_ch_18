@@ -42,7 +42,7 @@ class DbHelper {
     String sql = '''SELECT * FROM finance''';
     return await db!.rawQuery(sql);
   }
-  Future<List<Map<String, Object?>>> readcategorywiseData(int isIncome)
+  Future<List<Map<String, Object?>>> readCategorywiseData(int isIncome)
   async {
     Database? db=await database;
     String sql ='''SELECT * FROM finance where isIncome=?''';
