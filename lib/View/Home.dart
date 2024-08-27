@@ -95,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                                     color: Colors.red, fontSize: 16),
                               ),
                               Text(
-                               '${controller.totalIncome.value+controller.totalExpense.value}',
+                               '${controller.totalExpense.value}',
                                 style: const TextStyle(
                                     color: Colors.white, fontSize: 16),
                               ),
