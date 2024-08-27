@@ -32,9 +32,9 @@
 </div>
  <h1 align=" center">🔥Budget Tracker🔥</h1>
 <div align="center">
-  <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home1.png",width=21%,height=35%>
-    <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home2.png",width=21%,height=35%>
-    <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home3.png",width=21%,height=35%>
+  <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home1.png" width=21%,height=35%>
+    <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home2.png" width=21%,height=35%>
+    <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home3.png" width=21%,height=35%>
   <video src="https://github.com/user-attachments/assets/3974aaff-8aed-4fb9-8adb-467c702b76f5">
 
 
