@@ -31,20 +31,19 @@
   </p>
 </div>
  <h1 align=" center">🔥Budget Tracker🔥</h1>
+ <h1>Description :</h1>
+ <p>
+   To create a Budget Tracker app using Flutter, leverage the GetX package for state management and SQLite for local data storage. Begin by setting up a Flutter project and adding dependencies for GetX and sqflite. Create a model class for budget items with fields like amount, category, and date. Implement the SQLite database helper class to perform CRUD operations. Use GetX controllers to manage app state, including fetching, adding, and updating budget entries. Build the UI with GetX for reactive data display, ensuring seamless state updates across the app.
+ </p>
 <div align="center">
   <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home1.png" width=21%,height=35%>
-    <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home2.png" width=21%,height=35%>
-    <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home3.png" width=21%,height=35%>
-     <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/search.png" width=21%,height=35%>
+  <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home2.png" width=21%,height=35%>
+  <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/home3.png" width=21%,height=35%>
+  <img src="https://github.com/harshdusane2103/DataBase_Mangement_ch_18/blob/master/search.png" width=21%,height=35%>
   <video src="https://github.com/user-attachments/assets/3974aaff-8aed-4fb9-8adb-467c702b76f5">
-   <video src="https://github.com/user-attachments/assets/84f49389-2ddd-436e-8065-1ffa0d07f1b4">
-
-
-
-
-
-
-
-
+  <video src="https://github.com/user-attachments/assets/84f49389-2ddd-436e-8065-1ffa0d07f1b4">
+    <div align = "center">
+<a  href="">👉 Go To Dart File 👈</a>
+</div>
 </div>
 
