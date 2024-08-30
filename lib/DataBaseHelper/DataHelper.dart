@@ -20,6 +20,7 @@ class DbHelper {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         amount REAL NOT NULL,
         isIncome INTEGER NOT NULL,
+   
         category TEXT);
         ''';
         await db.execute(sql);
@@ -49,6 +50,12 @@ class DbHelper {
     List args=[isIncome];
     return await db!.rawQuery(sql,args);
 
+  }
+  Future<List<Map<String, Object?>>> readLiveData(String category)
+  async {
+    Database? db=await database;
+    String sql="SELECT * FROM finance WHERE  category LIKE '%$category%'" ;
+    return await db!.rawQuery(sql);
   }
 
   Future deleteData(int id) async {

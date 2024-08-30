@@ -18,6 +18,23 @@ class HomeScreen extends StatelessWidget {
           'Budget Tracker ',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
+        bottom: PreferredSize(
+            preferredSize: Size(400, 30),
+            child: TextFormField(
+              style: TextStyle(color: Colors.white),
+              controller: controller.txtSearch,
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.white)),
+                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+                  hintText: 'Search '
+
+              ),
+              onChanged: (value) {
+                controller.readLiveData(value);
+              },
+            )),
       ),
       body: Container(
         height: 800,
@@ -38,12 +55,9 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     InkWell(
-                      onTap:(){
+                      onTap: () {
                         controller.totalBalance(1);
-
-
                       },
-
                       child: Container(
                         height: 40,
                         width: 240,
@@ -73,11 +87,12 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 5,),
+                    SizedBox(
+                      width: 5,
+                    ),
                     InkWell(
-                      onTap: (){
+                      onTap: () {
                         controller.totalBalance(0);
-
                       },
                       child: Container(
                         height: 40,
@@ -95,7 +110,7 @@ class HomeScreen extends StatelessWidget {
                                     color: Colors.red, fontSize: 16),
                               ),
                               Text(
-                               '${controller.totalExpense.value}',
+                                '${controller.totalExpense.value}',
                                 style: const TextStyle(
                                     color: Colors.white, fontSize: 16),
                               ),
@@ -104,9 +119,11 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 5,),
+                    SizedBox(
+                      width: 5,
+                    ),
                     InkWell(
-                      onTap: (){
+                      onTap: () {
                         controller.getRecords();
                       },
                       child: Container(
@@ -124,7 +141,8 @@ class HomeScreen extends StatelessWidget {
                                 style: const TextStyle(
                                     color: Colors.blue, fontSize: 16),
                               ),
-                              Text('${controller.totalIncome.value + controller.totalExpense.value}',
+                              Text(
+                                '${controller.totalIncome.value + controller.totalExpense.value}',
                                 style: const TextStyle(
                                     color: Colors.white, fontSize: 16),
                               ),

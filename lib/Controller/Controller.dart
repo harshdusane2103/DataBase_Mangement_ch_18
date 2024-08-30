@@ -14,6 +14,7 @@ class BudgetController extends GetxController
 
   TextEditingController txtAmount = TextEditingController();
   TextEditingController txtCategory = TextEditingController();
+  TextEditingController txtSearch = TextEditingController();
 
   @override
   void onInit()
@@ -64,6 +65,11 @@ class BudgetController extends GetxController
     data.value= await DbHelper.dbHelper.readCategorywiseData(isIncome);
 
   }
+  Future<void> readLiveData(value)
+  async {
+   data.value =  await  DbHelper.dbHelper.readLiveData(value);
+  }
+
 
 
 
